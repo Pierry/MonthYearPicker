@@ -2,7 +2,7 @@ package com.twinkle94.monthyearpicker.custom_number_picker;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.support.v7.content.res.AppCompatResources;
+import androidx.appcompat.content.res.AppCompatResources;
 import android.util.AttributeSet;
 import android.widget.NumberPicker;
 

@@ -1,8 +1,8 @@
 package com.twinkle94.monthyearpicker.picker;
 
 import android.os.Build;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -410,22 +410,20 @@ public class YearMonthPickerDialog implements Dialog.OnClickListener {
         if (MONTHS_LIST == null) {
             int[] months = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
             String[] stringMonths = new String[months.length];
-
-            for (int i = 0; i < months.length; i++) {
-                Calendar calendar = Calendar.getInstance();
-
-                SimpleDateFormat monthDate = new SimpleDateFormat(MONTH_FORMAT, mCurrentLocale);
-
-                calendar.set(Calendar.MONTH, months[i]);
-                String monthName = monthDate.format(calendar.getTime());
-
-
-                stringMonths[i] = capitalize(monthName);
-            }
-
+            stringMonths[0] = "Janeiro";
+            stringMonths[1] = "Fevereiro";
+            stringMonths[2] = "Março";
+            stringMonths[3] = "Abril";
+            stringMonths[4] = "Maio";
+            stringMonths[5] = "Junho";
+            stringMonths[6] = "Julho";
+            stringMonths[7] = "Agosto";
+            stringMonths[8] = "Setembro";
+            stringMonths[9] = "Outubro";
+            stringMonths[10] = "Novembro";
+            stringMonths[11] = "Dezembro";
             MONTHS_LIST = stringMonths;
         }
-
         return MONTHS_LIST;
     }
 }
